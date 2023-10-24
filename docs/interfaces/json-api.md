@@ -132,7 +132,7 @@ transition | 0 to 255 | Duration of the crossfade between different colors/brigh
 tt | 0 to 255 | Similar to transition, but applies to just the current API call. Not included in state response.
 ps | -1 to 65535 | ID of currently set preset. `1~17~` can be used to iterate through presets 1-17.
 ~~pss~~ | 0 to 65535 | Bitwise indication of preset slots (0 - vacant, 1 - written). Always 0 in 0.11. Not changable. _Removed as of v0.11.1_
-psave | 1 to 16 (250 in 0.11) | Save current light config to specified preset slot. Not included in state response.
+psave | 1 to 16 (250 in 0.11) | Save current light config to specified preset slot. Not included in state response. To include the Preset name (n), brightness (ib) or segment bounds (sb) use {“psave”:<id>,“n”:“Preset name”,“ib”:true,“sb”:true}
 pl | -1 to 0 | ID of currently set playlist. For now, this sets the preset cycle feature, `-1` is off and `0` is on.
 nl.on | bool | Nightlight currently active
 nl.dur | 1 to 255 | Duration of nightlight in minutes
